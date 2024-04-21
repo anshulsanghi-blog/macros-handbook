@@ -1,0 +1,15 @@
+workspace = { members = ["macros"] }
+
+[package]
+name = "macros-handbook"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cacache = { version = "13.0.0", default-features = false, features = ["mmap"] }
+macros = { path = "./macros" }
+moka = { version = "0.12.7", features = ["sync"] }
+once_cell = "1.19.0"
